@@ -19,7 +19,20 @@
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      color:var(--text);
+      background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:20px 12px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
     body{
       margin:0;
       font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -38,15 +51,7 @@
     .container{
       width:100%;
       max-width:900px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border-radius:20px;
-      padding:28px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      border:1px solid var(--glass-border);
-      backdrop-filter: blur(8px) saturate(120%);
-      position:relative;
-      overflow:hidden;
-    }
+      backgro
 
     /* decorative circles */
     .container::before,
