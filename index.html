@@ -51,6 +51,12 @@
     /* decorative circles */
     .container::before,
     .container::after{
+      pointer-events:none;
+    }
+
+    /* reapply original styles */
+    .container::before,
+    .container::after{
       content:''; position:absolute; border-radius:50%; opacity:0.12; filter:blur(40px);
     }
     .container::before{ width:420px; height:420px; right:-120px; top:-120px; background:linear-gradient(135deg,var(--accent-2),var(--accent-1)); }
@@ -115,7 +121,8 @@
       header{justify-content:center}
       .btn{width:100%; justify-content:center}
       .actions{flex-direction:column; gap:8px}
-      #toggleUcapan{width:100%} .meta-card{ order:-1 } }
+      #toggleUcapan{width:100%}
+    } .meta-card{ order:-1 } }
 
     /* toast */
     .toast{ position:fixed; right:22px; bottom:22px; background:linear-gradient(90deg,var(--accent-2),var(--accent-1)); color:#042136; padding:12px 16px; border-radius:10px; box-shadow:0 8px 30px rgba(2,6,23,0.5); transform:translateY(20px) scale(.98); opacity:0; transition:all .26s cubic-bezier(.2,.9,.2,1); z-index:9999 }
